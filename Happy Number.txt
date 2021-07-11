@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        if(n==1)return true;
+        if(n==7)return true;
+        if( n<10)return false;
+        int square = 0;
+        while(n!=0)
+        {
+            square =square+ pow(n%10,2);
+            n=n/10;
+        }
+        n=square;
+        return isHappy(n);
+        
+        
+    }
+};
